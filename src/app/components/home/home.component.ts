@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CurrencyService } from 'src/app/services/currency.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,8 @@ export class HomeComponent implements OnInit {
     target: new FormControl(''),
   });
 
-  constructor(private currencyService: CurrencyService) {
+  //// PEDIENTE IMPLEMENTAR LA PERSISTENCIA DE LA TASA DE CAMBIO
+  constructor(private currencyService: CurrencyService, private storage : StorageService) {
 
   }
 

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { map, catchError } from "rxjs/operators";
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { SharedService } from './shared.service';
 import { EndpointsService } from './endpoints.service';
 
 @Injectable({
@@ -11,7 +10,7 @@ import { EndpointsService } from './endpoints.service';
 export class CurrencyService {
 
   currencyUrl : string;
-  constructor(private http: HttpClient, private shared: SharedService, private endpointService : EndpointsService) { 
+  constructor(private http: HttpClient, private endpointService : EndpointsService) { 
     this.currencyUrl = endpointService.currencyApi;
   }
 
