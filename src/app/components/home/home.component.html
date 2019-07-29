@@ -5,7 +5,7 @@
     <div class="box-container" fxLayout="row" fxLayout.xs="column">
       <mat-form-field class="currency-field" appearance="outline">
         <mat-label>EUR amount</mat-label>
-        <input matInput type="text" formControlName="source" placeholder="EUR" prefix="&#36; "
+        <input matInput type="text" formControlName="source" placeholder="EUR" prefix="&euro; "
           mask="comma_separator.4" />
         <button mat-button matSuffix mat-icon-button aria-label="Clear"
           (click)="clearInput()">
@@ -14,7 +14,7 @@
       </mat-form-field>
       <mat-form-field disabled class="currency-field" appearance="outline">
         <mat-label>USD amount</mat-label>
-        <input matInput type="text" formControlName="target" placeholder="EUR" prefix="&euro; "
+        <input matInput type="text" formControlName="target" placeholder="EUR" prefix="&#36; "
           mask="comma_separator.4" />
       </mat-form-field>
     </div>
