@@ -1,3 +1,17 @@
-<p>
-  home works!
-</p>
+<div class="content-div" fxLayoutAlign="center center">
+
+  <form fxLayoutAlign="center center" fxLayout="column" class="currency-form"  [formGroup]="currencyForm" (ngSubmit)="requestValue()" novalidate>
+    <div fxLayout="row" fxLayout.xs="column">
+      <mat-form-field  class="currency-field" appearance="outline">
+        <mat-label>EUR amount</mat-label>
+        <input matInput type="number" formControlName="source" placeholder="EUR" />
+      </mat-form-field>
+      <mat-form-field class="currency-field" appearance="outline">
+        <mat-label>USD amount</mat-label>
+        <input matInput type="number" formControlName="target" placeholder="EUR" />
+      </mat-form-field>
+    </div>
+    <button style="margin-left: 5px; width: 100%" mat-raised-button color="primary" type="submit" [disabled]="!currencyForm.valid">Calculate</button>
+    
+  </form>
+</div>

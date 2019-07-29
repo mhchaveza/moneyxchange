@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+/* global material theme*/
+/*deeppurple-amber pink-bluegrey purple-green indigo-pink*/
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  /* Colors definitions */
+  --light-indigo: #D7DAF0;
+  --lightest-indigo: #e8eaf6;
+
+}
+

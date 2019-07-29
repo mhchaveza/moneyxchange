@@ -1,21 +1,57 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!--HEADER DIV.-->
+<div class="header">
+  <img class="main-img" width="100" alt="Angular Logo" src="../assets/icons/exchange.svg">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<nav fxLayoutAlign="center center" mat-tab-nav-bar>
+  <a mat-tab-link
+     *ngFor="let link of navLinks"
+     [routerLink]="link.path"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    {{link.label}}
+  </a>
+</nav>
+<!--CONTENT DIV.-->
+<router-outlet style="min-height: 40%"></router-outlet>
+
+<!--FOOTER DIV.-->
+<div class="footer" fxLayout="row" fxLayout.xs="column">
+  <div class="sub-footer" fxLayout="row">
+    <div class="footer-col" fxLayout="column">
+      <h3>MoneyXChange &trade;</h3>
+      <span>Changing the way to exchange currencies</span>
+    </div>
+    <div class="footer-col" fxLayout="column">
+      <h3>Contact</h3>
+      <span>(+39) 3275842658</span>
+      <span>Via Ugo Tommei 7</span>
+      <span>Milan MI</span>
+      <span>Italy</span>
+    </div>
+  </div>
+  <div class="sub-footer" fxLayout="row">
+    <div class="footer-col" fxLayout="column">
+      <h3>Legal</h3>
+      <span>Terms of use</span>
+      <span>Privacy policy</span>
+      <span>Cookie Policy</span>
+      <span>Corporate Informacion</span>
+    </div>
+    <div class="footer-col" fxLayout="column">
+      <h3>Join the conversation!</h3>
+      <div fxLayout="row">
+        <i class="fa fa-facebook-official hover-opacity social-button"></i>
+        <i class="fa fa-instagram hover-opacity social-button"></i>
+        <i class="fa fa-snapchat hover-opacity social-button"></i>
+        <i class="fa fa-pinterest-p hover-opacity social-button"></i>
+        <i class="fa fa-twitter hover-opacity social-button"></i>
+        <i class="fa fa-linkedin hover-opacity social-button"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="credits">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from
+  <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+    href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  currencyForm = new FormGroup({
+    source: new FormControl(''),
+    target: new FormControl(''),
+  });
+  constructor() 
+  { 
+  }
 
   ngOnInit() {
   }
