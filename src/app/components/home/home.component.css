@@ -1,10 +1,5 @@
 
 
-.content-div{
-    background: var(--light-indigo);
-    min-height: 300px; 
-}
-
 .currency-field{
     min-width: 50%;
     max-width: 100%;

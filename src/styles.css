@@ -14,3 +14,10 @@ body, html {
 
 }
 
+
+.content-div{
+    background: var(--light-indigo);
+    min-height: 300px; 
+}
+
+

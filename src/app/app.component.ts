@@ -14,10 +14,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.navLinks = [
-        {label: 'EUR to USD', path: '/home'},
-        {label: 'Other', path: '/other'},
-        {label: 'About us', path: '/about'},
-        {label: 'Contact', path: '/contact'}
+        {label: 'EUR to USD', path: '/home', disabled: false},
+        {label: 'Other', path: '/other',  disabled: true},
+        {label: 'About us', path: '/about',  disabled: true},
+        {label: 'Contact', path: '/contact',  disabled: false}
     ];
   }
 }
